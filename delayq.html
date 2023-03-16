@@ -6,7 +6,7 @@
         .flex-container {
             display: flex;
             flex-direction: row;
-            background-color: orange;
+            background-color: red;
         }
         .flex-container>div {
     
@@ -26,13 +26,17 @@
 </head>
 <body>
     <h2>PuruHuthika Yerragunta builds a delaying queue</h2>
+    <input type="text" id="userInput">
+    <button onclick="makeNewDiv()">Add value</button>
+    
     <div class="flex-container" id="target">
         <div class="delayQ">row item 1</div>
         <div class="delayQ">row item 2</div>
         <div class="delayQ">row item 3</div>
     </div>
-    <input type="text" id="userInput"><br>
-    <button onclick="makeNewDiv()">Add value</button>
+
+    
+    
     <p> Press the button to create an new element of type div and then add it to the container.
     </p>
     
