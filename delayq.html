@@ -28,18 +28,11 @@
     <h2>PuruHuthika Yerragunta builds a delaying queue</h2>
     <input type="text" id="userInput">
     <button onclick="makeNewDiv()">Add value</button>
-    
     <div class="flex-container" id="target">
         <div class="delayQ">row item 1</div>
         <div class="delayQ">row item 2</div>
         <div class="delayQ">row item 3</div>
-    </div>
-
-    
-    
-    <p> Press the button to create an new element of type div and then add it to the container.
-    </p>
-    
+    </div><p> Press the button to create an new element of type div and then add it to the container.</p>
     <button onclick="get()">Get</button>
     <button onclick="delay()">Delay</button>
 </body>
@@ -54,7 +47,6 @@
         /* add it to the container */
         let container = document.getElementById('target')
         container.appendChild(element)
-
     }
     function get() {
         var queueItems = document.getElementsByClassName("delayQ");
