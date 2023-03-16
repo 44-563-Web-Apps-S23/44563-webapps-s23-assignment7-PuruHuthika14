@@ -35,6 +35,7 @@
     </div><p> Press the button to create an new element of type div and then add it to the container.</p>
     <button onclick="get()">Get</button>
     <button onclick="delay()">Delay</button>
+    <input type="button" onclick="promote()" value="promote">
 </body>
 <script>
     function makeNewDiv() {
@@ -56,14 +57,26 @@
         }
     }
     function delay(){
-			var queueItems = document.getElementsByClassName("delayQ");
-			var length = queueItems.length;
-			if (length > 1){
-				var removedItem = queueItems[length-1];
-				queueItems[length-1].remove();
-				var parentElem = document.getElementById("target");
-				parentElem.insertBefore(removedItem, parentElem.firstChild);
-			}
+		var queueItems = document.getElementsByClassName("delayQ");
+		var length = queueItems.length;
+		if (length > 1){
+			var removedItem = queueItems[length-1];
+			queueItems[length-1].remove();
+			var parentElem = document.getElementById("target");
+			parentElem.insertBefore(removedItem, parentElem.firstChild);
 		}
+		}
+
+    function promote(){
+        let queueItems = document.getElementsByClassName("delayQ")
+        let queueLength = queueItems.length
+        console.log(queueLength)
+        let random = Math.floor(Math.random()*queueLength)
+        console.log(random)
+        let removedItem = queueItems[random]
+        queueItems[random].remove()
+        let container = document.getElementById('target')
+        container.insertBefore(removedItem, container.firstChild)
+    }
 </script>
 </html>
